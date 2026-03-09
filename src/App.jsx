@@ -101,11 +101,11 @@ function calcularGastoTotal(tmb, fatorAtividade) {
 export default function App() {
   const hoje = new Date().toISOString().slice(0, 10);
 
-  const [pesoAtual, setPesoAtual] = useState(138);
-  const [metaPeso, setMetaPeso] = useState(108);
-  const [altura, setAltura] = useState(188);
-  const [idade, setIdade] = useState(22);
-  const [sexo, setSexo] = useState("masculino");
+  const [pesoAtual, setPesoAtual] = useState(0);
+  const [metaPeso, setMetaPeso] = useState(0);
+  const [altura, setAltura] = useState(0);
+  const [idade, setIdade] = useState(0);
+  const [sexo, setSexo] = useState();
   const [atividade, setAtividade] = useState(1.375);
   const [alvoDeficit, setAlvoDeficit] = useState(500);
   const [dataSelecionada, setDataSelecionada] = useState(hoje);
