@@ -130,6 +130,10 @@ button {
   flex-wrap: wrap;
 }
 
+.actions-row {
+  margin-top: 14px;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -162,13 +166,6 @@ button {
   color: #b91c1c;
 }
 
-.info-box {
-  margin-top: 14px;
-  background: #f9fafb;
-  border-radius: 14px;
-  padding: 14px;
-}
-
 .progress-area {
   margin-top: 16px;
 }
@@ -194,18 +191,20 @@ button {
   border-radius: 999px;
 }
 
-.preview-box {
+.preview-box,
+.empty-box,
+.meal-item {
   background: #f9fafb;
   border-radius: 14px;
   padding: 14px;
+}
+
+.preview-box {
   margin-top: 14px;
 }
 
 .empty-box {
-  background: #f9fafb;
   border: 1px dashed #d1d5db;
-  border-radius: 14px;
-  padding: 18px;
   text-align: center;
   color: #6b7280;
 }
@@ -232,7 +231,8 @@ td {
   font-size: 14px;
 }
 
-.meal-list {
+.meal-list,
+.history-list {
   display: grid;
   gap: 10px;
 }
@@ -241,40 +241,34 @@ td {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f9fafb;
-  border-radius: 14px;
-  padding: 14px;
 }
 
 .mt {
   margin-top: 24px;
 }
 
-.history-list {
-  display: grid;
-  gap: 10px;
-  margin-top: 12px;
+.chart-box {
+  width: 100%;
+  min-height: 300px;
+  margin-top: 10px;
 }
 
-.history-item {
+.saved-food-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: left;
-  background: #f9fafb;
-  color: #111827;
-  border: 1px solid transparent;
+  gap: 12px;
+  background: #eef2ff;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
-.history-item small {
+.saved-food-item small {
   display: block;
   margin-top: 4px;
-  color: #6b7280;
-}
-
-.history-item.active {
-  border-color: #111827;
-  background: #eef2ff;
+  color: #374151;
 }
 
 @media (min-width: 768px) {
@@ -285,29 +279,4 @@ td {
   .form-grid {
     grid-template-columns: 1fr 1fr;
   }
-}.actions-row {
-  margin-top: 14px;
-}
-
-.chart-box {
-  width: 100%;
-  min-height: 300px;
-  margin-top: 10px;
-}
-.saved-food-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  background: #9fd117;
-  border-radius: 14px;
-  padding: 14px;
-  margin-top: 10px;
-  flex-wrap: wrap;
-}
-
-.saved-food-item small {
-  display: block;
-  margin-top: 4px;
-  color: #1f970f;
 }

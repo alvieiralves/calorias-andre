@@ -1,16 +1,42 @@
-# React + Vite
+# Controle de Déficit Calórico
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web em React + Vite para registrar alimentos, monitorar macros e acompanhar evolução de peso.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Cálculo de TMB e gasto calórico diário com fator de atividade.
+- Definição de meta diária com déficit calórico.
+- Registro de alimentos por refeição com cálculo automático de calorias, proteína, carboidrato e gordura.
+- Cadastro e remoção de alimentos personalizados.
+- Histórico diário de consumo e peso salvo em `localStorage`.
+- Gráficos de calorias/dia e peso ao longo do tempo.
+- Suporte PWA (instalável).
 
-## React Compiler
+## Requisitos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js 20+
+- npm 10+
 
-## Expanding the ESLint configuration
+## Como rodar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Acesse a URL mostrada no terminal (normalmente `http://localhost:5173`).
+
+## Scripts
+
+- `npm run dev`: ambiente de desenvolvimento
+- `npm run build`: build de produção
+- `npm run preview`: pré-visualização do build
+- `npm run lint`: análise estática com ESLint
+- `npm run test`: testes unitários (Node Test Runner)
+
+## Estrutura (resumo)
+
+- `src/App.jsx`: composição principal da aplicação.
+- `src/components/*`: componentes de UI por domínio.
+- `src/utils/nutrition.js`: regras de cálculo nutricional.
+- `src/utils/storage.js`: utilitários de persistência segura.
